@@ -1,0 +1,221 @@
+/* mobile.css */
+
+/* General Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  
+  /* Body and Container Styles */
+  body {
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
+    color: #333;
+    background-color: #f4f4f4;
+  }
+  
+  /* .container {
+    width: 90%;
+    max-width: 1200px;
+    margin: 0 auto;
+  } */
+  
+  header {
+    color: #fff;
+    padding: 1rem 0;
+    text-align: center;
+  }
+  
+  header h1 {
+    font-size: 1.5rem;
+  }
+  
+  nav ul {
+    list-style: none;
+    padding: 0;
+  }
+  
+  nav ul li {
+    display: inline-block;
+    margin: 0 0.5rem;
+  }
+  
+  nav ul li a {
+    color: #fff;
+    text-decoration: none;
+    font-weight: bold;
+  }
+  
+  /* Main Section Styles */
+  main {
+    padding: 1rem 0;
+  }
+  
+  h2 {
+    font-size: 1.25rem;
+    margin-bottom: 0.5rem;
+  }
+
+  /* Responsive Images */
+  img {
+    max-width: 100%;
+    height: auto;
+  }
+  
+  /* Footer Styles */
+  footer {
+    background-color: orange;
+    color: #fff;
+    text-align: center;
+    padding-bottom: 1rem 0;
+  }
+  
+  footer p {
+    font-size: 0.875rem;
+  }
+  
+  /* Media Queries */
+  @media (max-width: 768px) {
+    header h1 {
+      font-size: 1.25rem;
+    }
+  
+    nav ul li {
+      display: block;
+      margin: 0.5rem 0;
+    }
+    
+    .container {
+      width: 95%;
+    }
+  }
+  
+  @media (max-width: 480px) {
+    header h1 {
+      font-size: 1rem;
+    }
+  
+    nav ul li {
+      font-size: 0.875rem;
+    }
+  
+    main {
+      padding: 0.5rem 0;
+    }
+  
+    footer p {
+      font-size: 0.75rem;
+    }
+  }
+
+@keyframes color {
+    0%{
+        background-color: rgb(212, 141, 212);
+    }
+    50%{
+        background-color: bisque;
+    }
+    100%{
+        background-color: rgb(163, 158, 255);
+    }
+}
+
+@media(max-width:500px) {
+    .body {
+        grid-template-areas: 
+        'header'
+        'content'
+        'sidebar'
+        '#box1'
+        '#box2'
+        '#box3'
+        'footer';
+        header { width: 100%;}
+    }
+}
+
+@media (max-width:768px) {
+    .body {
+        grid-template-areas: 
+        'header header'
+        'section section'
+        '#box1 #box1'
+        '#box2 #box2'
+        '#box3 #box3'
+        'footer footer';
+    }
+    header {width: 100%;}
+    footer {width: 100%;}
+
+        .navbar {
+            flex-direction: column; /* Stack brand and links vertically */
+            align-items: right; /* Align to the left */
+            width: 100%;
+
+        }
+
+    .toggle-menu-icon {
+        display: block; /* Show the menu icon */
+        animation: colour 2s infinite;
+        float: inline-end;
+        margin-right: 30px;
+        margin-top: -20px;
+        margin-bottom: 20px;
+    }
+
+    .navbar-links {
+        display: none; /* Hidden by default on mobile */
+        flex-direction: column; /* Stack links vertically */
+        width: 100%; /* Make sure the dropdown is full width */
+        margin-top: 50px;
+        position: absolute;
+        top: 50px;
+        left: 0;
+        right: 0; /* Ensures full width */
+        background-color: rgb(127, 0, 185);
+        z-index: 1;
+    }
+
+    .navbar-links ul {
+        flex-direction: column;
+        width: 100%;
+        padding: 20px;
+    }
+
+    .navbar-links li {
+        color: white;
+        margin: 10px 0; /* Vertical spacing between links */
+        text-align: center;
+        width: 100%; /* Ensures each link takes the full width */
+        }
+
+    /* Show the menu when checkbox is checked */
+    .toggle-menu:checked + .toggle-menu-icon + .navbar-links {
+        display: flex; /* Display links when menu icon is clicked */
+    }
+
+    
+    
+    @keyframes colour {
+        0%{
+            color: aqua;
+        }
+        20%{
+            color: rgb(255, 0, 242);
+        }
+        40%{
+            color: rgb(0, 187, 0);
+        }
+        60%{
+            color: rgb(255, 0, 0);
+        }
+        80% {
+            color: rgb(0, 26, 255);
+        }
+        100% {
+            color: rgb(70, 131, 255);
+        }
+    }
+
+  }
